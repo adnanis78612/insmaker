@@ -1,0 +1,28 @@
+{
+  "engines": {
+    "node": "24.7.0"
+  },
+  "name": "fakeinsta-failsafe",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "express-session": "*",
+    "connect-mongo": "*",
+    "helmet": "*",
+    "csurf": "*",
+    "express-rate-limit": "*",
+    "dotenv": "*",
+    "ejs": "*",
+    "multer": "*",
+    "bcryptjs": "*"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  }
+}

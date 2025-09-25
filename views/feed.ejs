@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FakeInsta — Feed</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <main class="feed container">
+      <% if (posts.length === 0) { %>
+        <p>No posts yet. Create one!</p>
+      <% } %>
+      <% for (let post of posts) { %>
+        <article class="post">
+          <div class="author"><%= post.author ? post.author.username : 'Unknown' %></div>
+          <img src="<%= post.imageUrl %>" alt="post image">
+          <p class="caption"><%= post.caption %></p>
+          <time><%= post.createdAt.toLocaleString() %></time>
+        </article>
+      <% } %>
+    </main>
+  </body>
+</html>

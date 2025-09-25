@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FakeInsta — Sign Up</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <main class="container">
+      <h1 class="logo">FakeInsta</h1>
+      <p class="lead">Educational demo — do not use real credentials.</p>
+      <form action="/signup" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input name="username" placeholder="username" required>
+        <input name="email" type="email" placeholder="email" required>
+        <input name="password" type="password" placeholder="password" required>
+        <button type="submit">Create Account</button>
+      </form>
+    </main>
+  </body>
+</html>

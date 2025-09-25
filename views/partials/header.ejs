@@ -1,0 +1,13 @@
+<header>
+  <div class="disclaimer">⚠ This is NOT Instagram — FakeInsta educational demo.</div>
+  <nav>
+    <a href="/feed">Feed</a>
+    <% if (!currentUser) { %>
+      <a href="/login">Login</a>
+      <a href="/signup">Sign Up</a>
+    <% } else { %>
+      <form action="/logout" method="POST" style="display:inline;"><button>Logout</button></form>
+      <a href="/posts/create">Create</a>
+    <% } %>
+  </nav>
+</header>
